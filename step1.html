@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stoneworld - Room / Floor Configurator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 style="padding-left: 20px;"><strike>hello world</strike></h1>
+        <div id="content">
+            <img id="mainImage" class="image" src="assets/living-1.jpeg" alt="" />
+        </div>
+        <div id="buttons" style="padding-left: 20px;"></div>
+
+        <nav>previous&nbsp&nbsp&nbsp<a href="step2.html">next</a></nav>
+    
+        <script>
+            const images = [
+                { url: 'assets/living-1.jpeg', name: 'Initial Living Room' },
+                { url: 'assets/living-2.jpg', name: 'Another Living Room' },
+                { url: 'assets/living-3.jpg', name: 'Yet Another Living Room' }
+                // Add more image objects here
+            ];
+
+        const mainImage = document.getElementById('mainImage');
+        const buttonsContainer = document.getElementById('buttons');
+        let activeButton = null;
+
+        // Create buttons dynamically
+        images.forEach((image, index) => {
+            const button = document.createElement('button');
+            button.textContent = image.name;
+            button.classList.add('button');
+            if (index === 0) { // Check if it's the first image (index 0)
+                button.disabled = true; // Disable the button for the first image
+                activeButton = button; // Set the activeButton to the first button
+            }
+            button.addEventListener('click', () => {
+                mainImage.src = image.url;
+                if (activeButton) {
+                    activeButton.disabled = false;
+                }
+                button.disabled = true;
+                activeButton = button;
+            });
+            buttonsContainer.appendChild(button);
+        });
+        </script>
+    </body>
+</html>

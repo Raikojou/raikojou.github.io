@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stoneworld - Room / Floor Configurator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 style="padding-left: 20px;"><strike>hello world?</strike></h1>
+        <div id="content">
+            <img style="position: absolute; z-index: 2" id="top" class="image" src="assets/living-2-tp.png" alt="" />
+            <img id="colour" class="image" src="assets/living-2.jpg" alt="" />
+        </div>
+        <div id="buttons" style="padding-left: 20px;"></div>
+        
+        <nav><a href="step1.html">previous</a>&nbsp&nbsp&nbsp<a href="step3.html">next</a></nav>
+
+        <script>
+            const images = [
+                { url: 'assets/living-2.jpg', name: 'Original' },
+                { url: 'assets/red.png', name: 'Red floor' },
+                { url: 'assets/green.png', name: 'Green floor' },
+                { url: 'assets/blue.png', name: 'Blue floor' },
+                { url: 'assets/orange.png', name: 'Orange floor' }
+            ];
+
+        const colourImage = document.getElementById('colour');
+        const buttonsContainer = document.getElementById('buttons');
+        let activeButton = null;
+
+        // Create buttons dynamically
+        images.forEach((image, index) => {
+            const button = document.createElement('button');
+            button.textContent = image.name;
+            button.classList.add('button');
+            if (index === 0) { // Check if it's the first image (index 0)
+                button.disabled = true; // Disable the button for the first image
+                activeButton = button; // Set the activeButton to the first button
+            }
+            button.addEventListener('click', () => {
+                colour.src = image.url;
+                if (activeButton) {
+                    activeButton.disabled = false;
+                }
+                button.disabled = true;
+                activeButton = button;
+            });
+            buttonsContainer.appendChild(button);
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stoneworld - Room / Floor Configurator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 style="padding-left: 20px;"><strike>hello world!</strike></h1>
+        <div id="content">
+            <img style="position: absolute; z-index: 2" id="top" class="image" src="assets/living-1-tp.png" alt="" />
+            <img id="colour" class="image" src="assets/red.png" alt="" />
+        </div>
+        <div id="topbuttons" style="padding-left: 20px;"></div>
+        <div id="buttons" style="padding-left: 20px; padding-top: 10px;"></div>
+        
+        <nav><a href="step2.html">previous</a>&nbsp&nbsp&nbspnext</nav>
+
+        <script>
+            const colour = [
+                { url: 'assets/red.png', name: 'Red floor' },
+                { url: 'assets/green.png', name: 'Green floor' },
+                { url: 'assets/blue.png', name: 'Blue floor' },
+                { url: 'assets/orange.png', name: 'Orange floor' }
+            ];
+            const room = [
+                { url: 'assets/living-1-tp.png', name: 'Living Room 1' },
+                { url: 'assets/living-2-tp.png', name: 'Living Room 2' },
+                { url: 'assets/living-3-tp.png', name: 'Living Room 3' }
+            ];
+
+        const roomImage = document.getElementById('top');
+        const colourImage = document.getElementById('colour');
+        const buttonsContainer = document.getElementById('topbuttons');
+        const colourButtonsContainer = document.getElementById('buttons')
+        let activeButton = null;
+        let activeColourButton = null;
+
+        // Create room buttons dynamically
+        room.forEach((image, index) => {
+            const button = document.createElement('button');
+            button.textContent = image.name;
+            button.classList.add('button');
+            if (index === 0) { // Check if it's the first image (index 0)
+                button.disabled = true; // Disable the button for the first image
+                activeButton = button; // Set the activeButton to the first button
+            }
+            button.addEventListener('click', () => {
+                roomImage.src = image.url;
+                if (activeButton) {
+                    activeButton.disabled = false;
+                }
+                button.disabled = true;
+                activeButton = button;
+            });
+            buttonsContainer.appendChild(button);
+        });
+
+        // Create floor colour buttons dynamically
+        colour.forEach((image, index) => {
+            const button = document.createElement('button');
+            button.textContent = image.name;
+            button.classList.add('button');
+            if (index === 0) { // Check if it's the first image (index 0)
+                button.disabled = true; // Disable the button for the first image
+                activeColourButton = button; // Set the activeColourButton to the first button
+            }
+            button.addEventListener('click', () => {
+                colourImage.src = image.url;
+                if (activeColourButton) {
+                    activeColourButton.disabled = false;
+                }
+                button.disabled = true;
+                activeColourButton = button;
+            });
+            colourButtonsContainer.appendChild(button);
+        });
+        </script>
+    </body>
+</html>
