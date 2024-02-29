@@ -15,22 +15,32 @@
             <img style="position: absolute; z-index: 2" id="top" class="image" src="assets/living-render.png" alt="" />
             <img id="colour" class="image" src="assets/floor-2-render.png" alt="" />
         </div>
-        <div id="buttons" style="padding-left: 20px;"></div>
+        <div id="topbuttons" style="padding-left: 20px;"></div>
+        <div id="buttons" style="padding-left: 20px; padding-top: 10px;"></div>
         
         <nav><a href="step3.html">previous</a>&nbsp&nbsp&nbspnext</nav>
 
         <script>
-            const images = [
-                { url: 'assets/floor-2-render.png', name: 'Light floor' },
-                { url: 'assets/floor-1-render.png', name: 'Dark floor' }
+            const colour = [
+                { url: 'assets/floor-2-render.png', name: 'Montalto White' },
+                { url: 'assets/floor-1-render.png', name: 'Montalto Graphite' },
+                { url: 'assets/floor-3-render.png', name: 'Kross White' },
+                { url: 'assets/floor-4-render.png', name: 'Kross Beige' }
+            ];
+            const room = [
+                { url: 'assets/living-render.png', name: 'Living Room' },
+                { url: 'assets/kitchen-render.png', name: 'Kitchen' }
             ];
 
+        const roomImage = document.getElementById('top');
         const colourImage = document.getElementById('colour');
-        const buttonsContainer = document.getElementById('buttons');
+        const buttonsContainer = document.getElementById('topbuttons');
+        const colourButtonsContainer = document.getElementById('buttons')
         let activeButton = null;
+        let activeColourButton = null;
 
-        // Create buttons dynamically
-        images.forEach((image, index) => {
+        // Create room buttons dynamically
+        room.forEach((image, index) => {
             const button = document.createElement('button');
             button.textContent = image.name;
             button.classList.add('button');
@@ -39,7 +49,7 @@
                 activeButton = button; // Set the activeButton to the first button
             }
             button.addEventListener('click', () => {
-                colour.src = image.url;
+                roomImage.src = image.url;
                 if (activeButton) {
                     activeButton.disabled = false;
                 }
@@ -47,6 +57,26 @@
                 activeButton = button;
             });
             buttonsContainer.appendChild(button);
+        });
+
+        // Create floor colour buttons dynamically
+        colour.forEach((image, index) => {
+            const button = document.createElement('button');
+            button.textContent = image.name;
+            button.classList.add('button');
+            if (index === 0) { // Check if it's the first image (index 0)
+                button.disabled = true; // Disable the button for the first image
+                activeColourButton = button; // Set the activeColourButton to the first button
+            }
+            button.addEventListener('click', () => {
+                colourImage.src = image.url;
+                if (activeColourButton) {
+                    activeColourButton.disabled = false;
+                }
+                button.disabled = true;
+                activeColourButton = button;
+            });
+            colourButtonsContainer.appendChild(button);
         });
         </script>
     </body>
