@@ -30,6 +30,17 @@
         <div id="pano2" class="pano"></div>
         <h3>The image, laid on top of a plain red image, then rendered in panoramic viewer:</h3>
         <div id="pano3" class="pano"></div>
+        <h3>In-house rendered image:</h3>
+        <img src="assets/panorama-test.png" />
+        <h3>In-house image in panoramic viewer:</h3>
+        <div id="pano4" class="pano"></div>
+        <p>key points to take:
+            <ul>
+                <li>camera too high</li>
+                <li>camera needs to be smack-bang in the center to avoid distorted corners - see back-left corner</li>
+                <li>will need to think how to deform 2d floor into equirectangular</li>
+            </ul>
+        </p>
 
 <canvas id="canvas" height="636px" width="1288px" style="display: none;"></canvas>
 <script>
@@ -42,6 +53,12 @@
     pannellum.viewer('pano2', {
         "type": "equirectangular",
         "panorama": 'assets/panorama_sample_03.png',
+        "autoLoad": true
+    });
+
+    pannellum.viewer('pano4', {
+        "type": "equirectangular",
+        "panorama": 'assets/panorama-test.png',
         "autoLoad": true
     });
 
