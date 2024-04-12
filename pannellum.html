@@ -36,6 +36,8 @@
         <div id="pano4" class="pano"></div>
         <h3>In-house image with custom floor from Hugin in panoramic viewer:</h3>
         <div id="pano5" class="pano"></div>
+        <h3>In-house image with separate floor file</h3>
+        <div id="pano6" class="pano"></div>
         <p>key points to take:
             <ul>
                 <li>camera too high</li>
@@ -69,13 +71,13 @@
         "panorama": 'assets/panorama-test-custom-floor.jpg',
         "autoload": true
     })
-
+    
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
 
     let image1 = new Image();
     let image2 = new Image();
-
+    
     image1.onload = function() {
         // Draw the first image
         ctx.drawImage(image1, 0, 0);
@@ -84,15 +86,16 @@
             // Draw the second image on top
             ctx.drawImage(image2, 0, 0);
 
-            pannellum.viewer('pano3', {
+            //pannellum.viewer('pano3', {
+            pannellum.viewer('pano6', {
                 "type": "equirectangular",
                 "panorama": canvas.toDataURL('image/png'),
                 "autoLoad": true
             });
         };
-        image2.src = 'assets/panorama_sample_03.png';
+        image2.src = 'assets/panorama-test-nofloor.png';
     };
-    image1.src = 'assets/panorama_helper.png';
+    image1.src = 'assets/test1 - test1.tif';
 </script>
 
 
