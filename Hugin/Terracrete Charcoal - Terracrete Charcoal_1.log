@@ -1,0 +1,56 @@
+============================================
+Stitching panorama...
+============================================
+
+Platform: Windows 11 (build 22631), 64-bit edition
+Version: 2023.0.0.d88dc56ded0e built by Thomas
+Working directory: D:\Github Repo\ts-floor-room-configurator\Hugin
+Output prefix: Terracrete Charcoal - Terracrete Charcoal
+
+Blender: enblend 4.3-8243911d8684
+ExifTool version: 12.60
+
+Number of active images: 1
+Output exposure value: 0.0
+Canvas size: 1434x717
+ROI: (0, 0) - (1434, 717) 
+FOV: 360x180
+Projection: Equirectangular(2)
+Using GPU for remapping: false
+
+Panorama Outputs:
+* Exposure corrected, low dynamic range
+
+First input image
+Number: 0
+Filename: D:\Lifestyle Renders\++Assets & Scenes\+++CUSTOM\Terracrete\Terracrete Charcoal.jpg
+Size: 2048x2048
+Projection: Equirectangular
+Response type: custom (EMoR)
+HFOV: 360
+Exposure value: 0.0
+
+
+Remapping LDR images...
+Multiple images output
+loading Terracrete Charcoal.jpg
+remapping Terracrete Charcoal.jpg
+saving Terracrete Charcoal - Terracrete Charcoal0000.tif
+
+Blending images...
+enblend: warning: only one input image given;
+enblend: note: Enblend needs two or more overlapping input images in order to do
+enblend: note: blending calculations.  The output will be the same as the input.
+enblend: warning: must fall back to export image without alpha channel
+enblend: note: output image type (PNG) does not support an alpha channel
+enblend: note: use option "--output-mask" to save a mask file of the alpha channel
+
+enblend: an exception occurred
+enblend: 
+Postcondition violation!
+error in png_set_pHYs(): known incorrect sRGB profile
+(C:\daten\Hugin\vcpkg\buildtrees\vigra\src\ion-1-11-1-c16c9c8e90\src\impex\png.cxx:583)
+
+enblend: info: remove invalid output image "Terracrete Charcoal - Terracrete Charcoal.png"
+
+Process took 0 s

@@ -34,6 +34,8 @@
         <img src="assets/panorama-test.png" />
         <h3>In-house image in panoramic viewer:</h3>
         <div id="pano4" class="pano"></div>
+        <h3>In-house image with custom floor from Hugin in panoramic viewer:</h3>
+        <div id="pano5" class="pano"></div>
         <p>key points to take:
             <ul>
                 <li>camera too high</li>
@@ -61,6 +63,12 @@
         "panorama": 'assets/panorama-test.png',
         "autoLoad": true
     });
+
+    pannellum.viewer('pano5', {
+        "type": "equirectangular",
+        "panorama": 'assets/panorama-test-custom-floor.jpg',
+        "autoload": true
+    })
 
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
