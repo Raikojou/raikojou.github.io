@@ -39,7 +39,7 @@ nav > .container {
 }
 
 #hero {
-    background-image: url("img/hero.jpg");
+    background-image: url("../img/hero.jpg");
     background-size: cover;
 }
 #hero > .container {
@@ -118,11 +118,11 @@ nav > .container {
     height: 600px;
 }
 .row1 > .row-image {
-    background-image: url("img/grid-1.jpg");
+    background-image: url("../img/grid-1.jpg");
     background-size: cover;
 }
 .row2 > .row-image {
-    background-image: url("img/grid-2.jpg");
+    background-image: url("../img/grid-2.jpg");
     background-size: cover;
 }
 .row-text {
@@ -142,7 +142,7 @@ nav > .container {
 
 #iconsPack {
     height: 700px;
-    background-image: url("img/icons-bg.jpg");
+    background-image: url("../img/icons-bg.jpg");
     background-size: cover;
     text-align: center;
 }
@@ -184,7 +184,7 @@ nav > .container {
     height: 700px;
 }
 #sbs .sbs-img {
-    background-image: url("img/flair.png");
+    background-image: url("../img/flair.png");
     background-size: cover;
 }
 .sbs-text {
