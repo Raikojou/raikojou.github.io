@@ -18,7 +18,6 @@ a {
 nav {
     background-color: white;
     height: 90px;
-    filter: drop-shadow(0 5px 5px #0005);
 }
 
 nav > .container {
