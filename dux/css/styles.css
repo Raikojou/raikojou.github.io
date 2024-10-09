@@ -58,7 +58,7 @@ nav > .container {
     color: white;
 }
 .hero-title {
-    font-size: 4rem;
+    font-size: 3.2rem;
 }
 .inbetween {
     padding: 1rem;
@@ -72,7 +72,7 @@ nav > .container {
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 #multiCard {
