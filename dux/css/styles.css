@@ -58,7 +58,7 @@ nav > .container {
     color: white;
 }
 .hero-title {
-    font-size: 42px;
+    font-size: 4rem;
 }
 .inbetween {
     padding: 1rem;
@@ -72,6 +72,7 @@ nav > .container {
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 2rem;
 }
 
 #multiCard {
@@ -193,5 +194,111 @@ nav > .container {
     gap: 2rem;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 500px;
+    margin-left: 465px;
+}
+
+#contact {
+    height: 400px;
+    background-color: #e4e9e9;
+}
+.contact-text {
+    grid-row: 1/4
+}
+#contact .container {
+    width: 1280px;
+    height: 100%;
+    padding: 3rem 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr) 1.5fr;
+    gap: 1rem;
+}
+#contact .container input,
+#contact .container .dropdown {
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: none;
+}
+#contact .container textarea {
+    padding-left: 20px;
+    border-radius: 10px;
+    border: none;
+}
+#contact .container .dropdown {
+    position: relative;
+    background: #566a72;
+    text-align: left;
+}
+#contact .container .dropdown::after {
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    content: "V";
+}
+#contact .container .submit {
+    height: 70%;
+    width: 50%;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+#footerMenu {
+    height: 340px;
+    background-color: #244549;
+    color: white;
+}
+#footerMenu .container {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.footer-menu--left {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding-right: 5rem;
+    justify-content: space-between;
+}
+.footer-menu--left img {
+    width: 50%;
+}
+#footerMenu .menus {
+    display: flex;
+    width: 100%;
+    gap: 2.5rem;
+}
+#footerMenu .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#footer {
+    height: 120px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+#footer .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+.footer-1 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.footer-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
 }
