@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/styles.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -46,15 +47,15 @@
                         combination of high efficiency and powerful<br />
                         recovery.
                     </p>
-                    <button class="button">LEARN MORE</button>
+                    <button class="button basic-anim">LEARN MORE</button>
                 </div>
                 <div class="inbetween">ENERGY EFFICIENT HOT WATER SYSTEMS</div>
             </div>
         </section>
         <section id="multiCard">
             <div class="container">
-                <div class="card">
-                    <img style="width: 100%" src="img\col-1.jpg" alt="" />
+                <div class="card lazy-slide-right">
+                    <img style="width: 100%" src="img/col-1.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
                         <p style="font-size: 0.9rem">
@@ -65,7 +66,7 @@
                         <button style="margin-top: 1.5rem" class="button">LEARN MORE</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card lazy-slide-up">
                     <img style="width: 100%" src="img\col-1.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
@@ -77,7 +78,7 @@
                         <button style="margin-top: 1.5rem" class="button">LEARN MORE</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card lazy-slide-up">
                     <img style="width: 100%" src="img\col-3.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
@@ -89,7 +90,7 @@
                         <button style="margin-top: 1.5rem" class="button">LEARN MORE</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card lazy-slide-left">
                     <img style="width: 100%" src="img\col-4.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
@@ -105,7 +106,7 @@
         </section>
         <section id="grid">
             <div class="row1">
-                <div class="row-text">
+                <div class="row-text lazy-slide-right">
                     <p style="font-size: 2rem; margin-bottom: 0">Makes Sense, <br />Saves Dollars</p>
                     <p>
                         When you purchase and install a Dux Ecosmart<br />
@@ -118,11 +119,11 @@
                     </p>
                     <button style="margin-top: 1.5rem" class="button">READ MORE</button>
                 </div>
-                <div class="row-image"></div>
+                <div class="row-image lazy-slide-left"></div>
             </div>
             <div class="row2">
-                <div class="row-image"></div>
-                <div class="row-text">
+                <div class="row-image lazy-slide-right"></div>
+                <div class="row-text lazy-slide-left">
                     <p style="font-size: 2rem; margin-bottom: 0">Powered by<br />the Australian Sun</p>
                     <p>
                         Our energy efficient solar and heat pump<br />
@@ -146,8 +147,8 @@
                         <div class="column-icon">
                             <img style="transform: translateY(5%)" src="img\icon-heart.png" alt="" />
                         </div>
-                        <p style="font-size: 1.2rem">AN ICONIC<br />AUSTRALIAN BRAND</p>
-                        <p>
+                        <p class="lazy-slide-down" style="font-size: 1.2rem">AN ICONIC<br />AUSTRALIAN BRAND</p>
+                        <p class="lazy-slide-down">
                             An iconic Australian brand<br />
                             since 1915, the Dux range<br />
                             has seen continuous<br />
@@ -159,8 +160,8 @@
                         <div class="column-icon">
                             <img src="img\icon-oz.png" alt="" />
                         </div>
-                        <p style="font-size: 1.2rem">MANUFACTURING<br />IN AUSTRALIA</p>
-                        <p>
+                        <p class="lazy-slide-down" style="font-size: 1.2rem">MANUFACTURING<br />IN AUSTRALIA</p>
+                        <p class="lazy-slide-down">
                             Dux water heaters are<br />
                             manufactured in a<br />
                             state-of-the-art facility in<br />
@@ -172,8 +173,8 @@
                         <div class="column-icon">
                             <img src="img\icon-tech.png" alt="" />
                         </div>
-                        <p style="font-size: 1.2rem">UNRIVALLED<br />TECHNOLOGY</p>
-                        <p>
+                        <p class="lazy-slide-down" style="font-size: 1.2rem">UNRIVALLED<br />TECHNOLOGY</p>
+                        <p class="lazy-slide-down">
                             Backed by Noritz, an<br />
                             international hot water<br />
                             powerhouse and a leading<br />
@@ -187,11 +188,11 @@
         </section>
         <section id="sbs">
             <div class="sbs-text">
-                <p style="font-size: 2.5rem; margin-top: 0; margin-bottom: 1rem">
+                <p class="lazy-slide-down" style="font-size: 2.5rem; margin-top: 0; margin-bottom: 1rem">
                     Why Choose <br />
                     Dux Ecosmart
                 </p>
-                <p style="font-size: 1.2rem">
+                <p class="lazy-slide-right" style="font-size: 1.2rem">
                     An iconic Australian brand since 1915, Dux<br />
                     is committed to producing high quality<br />
                     water heaters and to developing innovative,<br />
@@ -203,9 +204,9 @@
                     This can help to lower your hot water<br />
                     energy bills and reduce your carbon
                 </p>
-                <button style="background-color: #fefffa; color: #cc3e32" class="button">FIND OUT MORE</button>
+                <button style="background-color: #fefffa; color: #cc3e32" class="button lazy-slide-up">FIND OUT MORE</button>
             </div>
-            <div class="sbs-img"></div>
+            <div class="sbs-img lazy-slide-left"></div>
         </section>
         <section id="contact">
             <div class="container">
@@ -267,6 +268,35 @@
                 <div class="footer-2">Copyright © 2024 Dux Manufacturing Ltd. All rights reserved. | <img src="img\noritz.png" alt="" /> A member of Noritz Group</div>
             </div>
         </section>
-        <script src="" async defer></script>
+        <script>
+            function debounce(func, wait = 100) {
+                let timeout;
+                return function () {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(func, wait);
+                };
+            }
+            $(document).ready(function () {
+                // Lazy load images
+                function lazyLoadEl() {
+                    $('[class*="lazy-"]').each(function (index) {
+                        const $el = $(this);
+                        const elTop = $el.offset().top;
+                        const windowBottom = $(window).scrollTop() + $(window).height();
+
+                        if (elTop < windowBottom) {
+                            setTimeout(() => {
+                                $el.removeClass(function (index, className) {
+                                    return (className.match(/(^|\s)lazy-\S+/g) || []).join(" ");
+                                }).addClass("lazy");
+                            }, index * 70);
+                        }
+                    });
+                }
+
+                $(window).on("scroll", debounce(lazyLoadEl, 100));
+                lazyLoadEl(); // Initial check
+            });
+        </script>
     </body>
 </html>

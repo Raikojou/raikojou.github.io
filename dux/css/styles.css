@@ -12,7 +12,7 @@ a {
     border-radius: 1000px;
     border: none;
     color: white;
-    background-color: #cb4733;
+    background-color: #d43b2d;
 }
 
 nav {
@@ -61,7 +61,7 @@ nav > .container {
 }
 .inbetween {
     padding: 1rem;
-    background-color: #2e444a;
+    background-color: #2a444c;
     color: white;
     text-align: center;
     border-radius: 200px;
@@ -168,7 +168,7 @@ nav > .container {
     bottom: 110%;
     left: 50%;
     transform: translateX(-50%);
-    background: #cc4733;
+    background: #d43b2d;
     padding: 1rem;
     border-radius: 100%;
 }
@@ -177,7 +177,7 @@ nav > .container {
 }
 
 #sbs {
-    background-color: #cc3e32;
+    background-color: #d43b2d;
     display: grid;
     grid-template-columns: 45% 55%;
     height: 700px;
@@ -227,7 +227,7 @@ nav > .container {
 }
 #contact .container .dropdown {
     position: relative;
-    background: #566a72;
+    background: #536a75;
     text-align: left;
 }
 #contact .container .dropdown::after {
@@ -245,7 +245,7 @@ nav > .container {
 
 #footerMenu {
     height: 340px;
-    background-color: #244549;
+    background-color: #2a444c;
     color: white;
 }
 #footerMenu .container {
@@ -300,4 +300,44 @@ nav > .container {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
+}
+
+/* lazy load animations */
+.lazy {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.lazy-fade-in {
+    opacity: 0;
+}
+
+.lazy-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.lazy-slide-right {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.lazy-slide-down {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.lazy-slide-left {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+/* button animation */
+.basic-anim {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.basic-anim:hover {
+    background-color: #fff;
+    color: #d43b2d;
 }
