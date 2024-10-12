@@ -47,14 +47,14 @@
                         combination of high efficiency and powerful<br />
                         recovery.
                     </p>
-                    <button class="button basic-anim">LEARN MORE</button>
+                    <button class="button wipe-anim">LEARN MORE</button>
                 </div>
                 <div class="inbetween">ENERGY EFFICIENT HOT WATER SYSTEMS</div>
             </div>
         </section>
         <section id="multiCard">
             <div class="container">
-                <div class="card lazy-slide-right">
+                <div class="card lazy" lazy-animation="slide-right">
                     <img style="width: 100%" src="img/col-1.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
@@ -66,7 +66,7 @@
                         <button style="margin-top: 1.5rem" class="button wipe-anim">LEARN MORE</button>
                     </div>
                 </div>
-                <div class="card lazy-slide-up">
+                <div class="card lazy" lazy-animation="slide-up">
                     <img style="width: 100%" src="img\col-1.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
@@ -78,7 +78,7 @@
                         <button style="margin-top: 1.5rem" class="button wipe-anim">LEARN MORE</button>
                     </div>
                 </div>
-                <div class="card lazy-slide-up">
+                <div class="card lazy" lazy-animation="slide-up">
                     <img style="width: 100%" src="img\col-3.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
@@ -90,7 +90,7 @@
                         <button style="margin-top: 1.5rem" class="button wipe-anim">LEARN MORE</button>
                     </div>
                 </div>
-                <div class="card lazy-slide-left">
+                <div class="card lazy" lazy-animation="slide-left">
                     <img style="width: 100%" src="img\col-4.jpg" alt="" />
                     <div class="card-content">
                         <p style="margin: 0; font-size: 1.2rem">Electric Boosted Solar</p>
@@ -106,7 +106,7 @@
         </section>
         <section id="grid">
             <div class="row1">
-                <div class="row-text lazy-slide-right">
+                <div class="row-text lazy" lazy-animation="slide-right">
                     <p style="font-size: 2rem; margin-bottom: 0">Makes Sense, <br />Saves Dollars</p>
                     <p>
                         When you purchase and install a Dux Ecosmart<br />
@@ -117,13 +117,13 @@
                         Each incentive has eligibility requirements that<br />
                         need to be met.
                     </p>
-                    <button style="margin-top: 1.5rem" class="button">READ MORE</button>
+                    <button style="margin-top: 1.5rem" class="button wipe-anim">READ MORE</button>
                 </div>
-                <div class="row-image lazy-slide-left"></div>
+                <div class="row-image lazy" lazy-animation="slide-left"></div>
             </div>
             <div class="row2">
-                <div class="row-image lazy-slide-right"></div>
-                <div class="row-text lazy-slide-left">
+                <div class="row-image lazy" lazy-animation="slide-right"></div>
+                <div class="row-text lazy" lazy-animation="slide-left">
                     <p style="font-size: 2rem; margin-bottom: 0">Powered by<br />the Australian Sun</p>
                     <p>
                         Our energy efficient solar and heat pump<br />
@@ -132,7 +132,7 @@
                         water energy bills and reduce your carbon<br />
                         footprint.
                     </p>
-                    <button style="margin-top: 1.5rem" class="button">READ MORE</button>
+                    <button style="margin-top: 1.5rem" class="button wipe-anim">READ MORE</button>
                 </div>
             </div>
         </section>
@@ -188,11 +188,11 @@
         </section>
         <section id="sbs">
             <div class="sbs-text">
-                <p class="lazy-slide-down" style="font-size: 2.5rem; margin-top: 0; margin-bottom: 1rem">
+                <p class="lazy" lazy-animation="slide-right" style="font-size: 2.5rem; margin-top: 0; margin-bottom: 1rem">
                     Why Choose <br />
                     Dux Ecosmart
                 </p>
-                <p class="lazy-slide-right" style="font-size: 1.2rem">
+                <p class="lazy" lazy-animation="slide-right" style="font-size: 1.2rem">
                     An iconic Australian brand since 1915, Dux<br />
                     is committed to producing high quality<br />
                     water heaters and to developing innovative,<br />
@@ -204,9 +204,9 @@
                     This can help to lower your hot water<br />
                     energy bills and reduce your carbon
                 </p>
-                <button style="background-color: #fefffa; color: #cc3e32" class="button lazy-slide-up">FIND OUT MORE</button>
+                <button style="background-color: #fefffa; color: #cc3e32" class="button lazy" lazy-animation="slide-right">FIND OUT MORE</button>
             </div>
-            <div class="sbs-img lazy-slide-left"></div>
+            <div class="sbs-img lazy" lazy-animation="slide-left"></div>
         </section>
         <section id="contact">
             <div class="container">
@@ -222,7 +222,14 @@
                 <input style="grid-column: 2; grid-row: 2" placeholder="Your email address *" />
                 <input style="grid-column: 2; grid-row: 3" placeholder="Your phone number *" />
                 <textarea style="grid-column: 3; grid-row: 1/3" placeholder="Message *"></textarea>
-                <button class="button dropdown">General Enquiry</button>
+                <button class="button dropdown">
+                    <span>General Enquiry</span>
+                    <span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+                        </svg>
+                    </span>
+                </button>
                 <button class="button submit" style="grid-column: 3; grid-row: 4">SEND MESSAGE</button>
             </div>
         </section>
@@ -279,17 +286,17 @@
             $(document).ready(function () {
                 // Lazy load images
                 function lazyLoadEl() {
-                    $('[class*="lazy-"]').each(function (index) {
+                    $(".lazy").each(function (index) {
                         const $el = $(this);
+                        console.log("el found");
+                        const elAnim = $el.attr("lazy-animation");
                         const elTop = $el.offset().top;
                         const windowBottom = $(window).scrollTop() + $(window).height();
 
                         if (elTop < windowBottom) {
                             setTimeout(() => {
-                                $el.removeClass(function (index, className) {
-                                    return (className.match(/(^|\s)lazy-\S+/g) || []).join(" ");
-                                }).addClass("lazy");
-                            }, index * 70);
+                                $el.removeClass("lazy").addClass(`lazy-${elAnim}`);
+                            }, index * 200);
                         }
                     });
                 }
